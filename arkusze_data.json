@@ -1,0 +1,254 @@
+{
+  "arkusze": [
+    {
+      "id": 1,
+      "nazwa": "INF.02 Czerwiec 2021 - Zadanie 1",
+      "plik": "inf2-czerwiec-2021-zadanie-1.pdf",
+      "data": "2021-06",
+      "sesja": "czerwiec 2021",
+      "tagi": []
+    },
+    {
+      "id": 2,
+      "nazwa": "INF.02 Styczeń 2022 - Zadanie 1",
+      "plik": "inf2-styczen-2022-zadanie-1.pdf",
+      "data": "2022-01",
+      "sesja": "Styczeń 2022",
+      "tagi": []
+    },
+    {
+      "id": 3,
+      "nazwa": "INF.02 Czerwiec 2022 - Zadanie 1",
+      "plik": "inf2-czerwiec-2022-zadanie-1.pdf",
+      "data": "2022-06",
+      "sesja": "czerwiec 2022",
+      "tagi": []
+    },
+    {
+      "id": 4,
+      "nazwa": "INF.02 Czerwiec 2022 - Zadanie 2",
+      "plik": "inf2-czerwiec-2022-zadanie-2.pdf",
+      "data": "2022-06",
+      "sesja": "czerwiec 2022",
+      "tagi": []
+    },
+    {
+      "id": 5,
+      "nazwa": "INF.02 Czerwiec 2022 - Zadanie 3",
+      "plik": "inf2-czerwiec-2022-zadanie-3.pdf",
+      "data": "2022-06",
+      "sesja": "czerwiec 2022",
+      "tagi": []
+    },
+    {
+      "id": 6,
+      "nazwa": "INF.02 Czerwiec 2022 - Zadanie 4",
+      "plik": "inf2-czerwiec-2022-zadanie-4.pdf",
+      "data": "2022-06",
+      "sesja": "czerwiec 2022",
+      "tagi": []
+    },
+    {
+      "id": 7,
+      "nazwa": "INF.02 Styczeń 2023 - Zadanie 1",
+      "plik": "inf2-styczen-2023-zadanie-1.pdf",
+      "data": "2023-01",
+      "sesja": "Styczeń 2023",
+      "tagi": []
+    },
+    {
+      "id": 8,
+      "nazwa": "INF.02 Styczeń 2023 - Zadanie 2",
+      "plik": "inf2-styczen-2023-zadanie-2.pdf",
+      "data": "2023-01",
+      "sesja": "Styczeń 2023",
+      "tagi": []
+    },
+    {
+      "id": 9,
+      "nazwa": "INF.02 Styczeń 2023 - Zadanie 3",
+      "plik": "inf2-styczen-2023-zadanie-3.pdf",
+      "data": "2023-01",
+      "sesja": "Styczeń 2023",
+      "tagi": []
+    },
+    {
+      "id": 10,
+      "nazwa": "INF.02 Styczeń 2023 - Zadanie 4",
+      "plik": "inf2-styczen-2023-zadanie-4.pdf",
+      "data": "2023-01",
+      "sesja": "Styczeń 2023",
+      "tagi": []
+    },
+    {
+      "id": 11,
+      "nazwa": "INF.02 Czerwiec 2023 - Zadanie 1",
+      "plik": "inf2-czerwiec-2023-zadanie-1.pdf",
+      "data": "2023-06",
+      "sesja": "czerwiec 2023",
+      "tagi": ["Ubuntu Server", "Windows 10", "Router", "DHCP", "Diagnostyka", "VLAN", "Konfiguracja Systemu", "Kosztorys"]
+    },
+    {
+      "id": 12,
+      "nazwa": "INF.02 Czerwiec 2023 - Zadanie 2",
+      "plik": "inf2-czerwiec-2023-zadanie-2.pdf",
+      "data": "2023-06",
+      "sesja": "czerwiec 2023",
+      "tagi": ["Windows Server", "Ubuntu Desktop", "Router", "VLAN", "DHCP", "Diagnostyka", "Active Directory", "Zasady Grup", "Konfiguracja Systemu"]
+    },
+    {
+      "id": 13,
+      "nazwa": "INF.02 Czerwiec 2023 - Zadanie 3",
+      "plik": "inf2-czerwiec-2023-zadanie-3.pdf",
+      "data": "2023-06",
+      "sesja": "czerwiec 2023",
+      "tagi": ["Windows Server", "Ubuntu Desktop", "Router", "DHCP", "Diagnostyka", "Active Directory", "Serwer plików", "Konfiguracja Systemu", "Kosztorys"]
+    },
+    {
+      "id": 14,
+      "nazwa": "INF.02 Czerwiec 2023 - Zadanie 4",
+      "plik": "inf2-czerwiec-2023-zadanie-4.pdf",
+      "data": "2023-06",
+      "sesja": "czerwiec 2023",
+      "tagi": ["Ubuntu Server", "Windows 10", "Router", "DHCP", "WiFi", "VLAN", "Konfiguracja Systemu", "Diagnostyka", "Kosztorys"]
+    },
+    {
+      "id": 15,
+      "nazwa": "INF.02 Styczeń 2024 - Zadanie 1",
+      "plik": "inf2-styczen-2024-zadanie-1.pdf",
+      "data": "2024-01",
+      "sesja": "Styczeń 2024",
+      "tagi": ["Windows Server", "Ubuntu Desktop", "Router", "DNS", "Routing", "Kosztorys"]
+    },
+    {
+      "id": 16,
+      "nazwa": "INF.02 Styczeń 2024 - Zadanie 2",
+      "plik": "inf2-styczen-2024-zadanie-2.pdf",
+      "data": "2024-01",
+      "sesja": "Styczeń 2024",
+      "tagi": ["Ubuntu Server", "Windows 10", "VLAN", "Router", "DHCP", "Zasady Grup", "Konfiguracja Systemu", "Kosztorys"]
+    },
+    {
+      "id": 17,
+      "nazwa": "INF.02 Styczeń 2024 - Zadanie 3",
+      "plik": "inf2-styczen-2024-zadanie-3.pdf",
+      "data": "2024-01",
+      "sesja": "Styczeń 2024",
+      "tagi": ["Windows Server","Windows 10", "Active Directory", "VLAN", "DHCP", "Router", "Diagnostyka"]
+    },
+    {
+      "id": 18,
+      "nazwa": "INF.02 Styczeń 2024 - Zadanie 4",
+      "plik": "inf2-styczen-2024-zadanie-4.pdf",
+      "data": "2024-01",
+      "sesja": "Styczeń 2024",
+      "tagi": ["Windows Server", "Windows 10", "Router", "VLAN", "Active Directory", "Konfiguracja Systemu", "Diagnostyka"]
+    },
+    {
+      "id": 19,
+      "nazwa": "INF.02 Czerwiec 2024 - Zadanie 1",
+      "plik": "inf2-czerwiec-2024-zadanie-1.pdf",
+      "data": "2024-06",
+      "sesja": "czerwiec 2024",
+      "tagi": ["Windows Server", "Ubuntu Desktop", "Router", "VLAN", "DNS", "Kosztorys"]
+    },
+    {
+      "id": 20,
+      "nazwa": "INF.02 Czerwiec 2024 - Zadanie 2",
+      "plik": "inf2-czerwiec-2024-zadanie-2.pdf",
+      "data": "2024-06",
+      "sesja": "czerwiec 2024",
+      "tagi": ["Windows Server","Ubuntu Desktop", "Router", "WiFi", "Bash"," Active Directory", "Kosztorys", "Konfiguracja Systemu"]
+    },
+    {
+      "id": 21,
+      "nazwa": "INF.02 Czerwiec 2024 - Zadanie 3",
+      "plik": "inf2-czerwiec-2024-zadanie-3.pdf",
+      "data": "2024-06",
+      "sesja": "czerwiec 2024",
+      "tagi": ["Windows Server", "Windows 10", "Router", "DHCP", "VLAN", "Active Directory", "DHCP", "Konfiguracja Systemu"]
+    },
+    {
+      "id": 22,
+      "nazwa": "INF.02 Czerwiec 2024 - Zadanie 4",
+      "plik": "inf2-czerwiec-2024-zadanie-4.pdf",
+      "data": "2024-06",
+      "sesja": "czerwiec 2024",
+      "tagi": ["Ubuntu Server", "Windows 10", "Router", "DHCP", "Batch", "Zasady Grup"]
+    },
+    {
+      "id": 23,
+      "nazwa": "INF.02 Czerwiec 2024 - Zadanie 5",
+      "plik": "inf2-czerwiec-2024-zadanie-5.pdf",
+      "data": "2024-06",
+      "sesja": "czerwiec 2024",
+      "tagi": ["Ubuntu Server", "Windows 10", "Router", "DHCP", "Zasady Grup", "Konfiguracja Systemu"]
+    },
+    {
+      "id": 24,
+      "nazwa": "INF.02 Czerwiec 2024 - Zadanie 6",
+      "plik": "inf2-czerwiec-2024-zadanie-6.pdf",
+      "data": "2024-06",
+      "sesja": "czerwiec 2024",
+      "tagi": ["Ubuntu Server", "Windows 10", "Router", "DHCP", "WiFi", "SSH", "Diagnostyka", "Konfiguracja Systemu"]
+    },
+    {
+      "id": 25,
+      "nazwa": "INF.02 Styczeń 2025 - Zadanie 1",
+      "plik": "inf2-styczen-2025-zadanie-1.pdf",
+      "data": "2025-01",
+      "sesja": "Styczeń 2025",
+      "tagi": ["Windows Server", "Ubuntu Desktop", "Router", "DHCP", "Maszyny Wirtualne", "DNS", "IIS", "Kosztorys"]
+    },
+    {
+      "id": 26,
+      "nazwa": "INF.02 Styczeń 2025 - Zadanie 2",
+      "plik": "inf2-styczen-2025-zadanie-2.pdf",
+      "data": "2025-01",
+      "sesja": "Styczeń 2025",
+      "tagi": ["Ubuntu Server", "Windows 10", "Router", "SSH", "Zasady Grup", "Kosztorys", "Konfiguracja Systemu"]
+    },
+    {
+      "id": 27,
+      "nazwa": "INF.02 Styczeń 2025 - Zadanie 3",
+      "plik": "inf2-styczen-2025-zadanie-3.pdf",
+      "data": "2025-01",
+      "sesja": "Styczeń 2025",
+      "tagi": ["Windows Server", "Windows 10", "WiFi", "DHCP", "Router", "Drukarka", "Batch", "Konfiguracja Systemu"]
+    },
+    {
+      "id": 28,
+      "nazwa": "INF.02 Styczeń 2025 - Zadanie 4",
+      "plik": "inf2-styczen-2025-zadanie-4.pdf",
+      "data": "2025-01",
+      "sesja": "Styczeń 2025",
+    "tagi": ["Windows Server", "Windows 10", "Router", "Active Directory", "DNS", "Drukarka", "Zasady Grup", "Kosztorys", "Konfiguracja Systemu"]
+    }
+  ],
+  "dostepne_tagi": [
+    "Windows Server",
+    "Windows 10",
+    "Ubuntu Server",
+    "Ubuntu Desktop",
+    "Router",
+    "Routing",
+    "DHCP",
+    "VLAN",
+    "WiFi",
+    "Przekierowywanie portów",
+    "Active Directory",
+    "Serwer plików",
+    "Zasady Grup",
+    "DNS",
+    "IIS",
+    "Maszyny Wirtualne",
+    "Apache",
+    "SSH",
+    "FTP",
+    "Drukarka",
+    "Batch",
+    "Bash",
+    "Kosztorys",
+    "Konfiguracja Systemu"
+  ]
+}

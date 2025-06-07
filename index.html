@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arkusze Egzaminacyjne INF.02</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>    
+    <div class="container">
+        <div class="header">
+            <div class="header-left">
+                <h1><i class="fas fa-file-pdf"></i> Arkusze Egzaminacyjne INF.02</h1>
+                <p>Kolekcja arkuszy egzaminacyjnych z możliwością podglądu i pobierania</p>
+                <p>Strona została utworzona tylko jako segregator arkuszy, dla użytku szkolnego i niekomercyjnego.</p>
+                <p>Wszystkie arkusze zostały pozyskane ze strony <a href="https://egzaminzawodowy.info">egzaminzawodowy.info</a></p>
+            </div>
+            <div class="header-right">
+                <div class="stats">
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-number" id="total-arkusze">0</span>
+                            <span class="stat-label">Arkuszy</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="visible-arkusze">0</span>
+                            <span class="stat-label">Widocznych</span>
+                        </div>                        <div class="stat-item">
+                            <span class="stat-number" id="total-tags">0</span>
+                            <span class="stat-label">Tagów</span>
+                        </div>
+                        <div class="stat-item active-filters-container" style="display: none;">
+                            <span class="stat-number" id="active-filters">0</span>
+                            <span class="stat-label">Aktywnych filtrów</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="search-container">
+                    <input type="text" class="search-input" id="search" placeholder="🔍 Wyszukaj arkusze...">
+                </div>
+            </div>
+        </div>
+
+        <div class="filters">
+            <div class="tag-filter" id="tag-filter">
+                <!-- Tagi będą załadowane dynamicznie -->
+            </div>
+        </div>
+
+        <div class="arkusze-grid" id="arkusze-container">
+            <!-- Arkusze będą załadowane dynamicznie -->
+        </div>
+
+        <div class="no-results" id="no-results" style="display: none;">
+            <i class="fas fa-search"></i>
+            <h3>Brak wyników</h3>
+            <p>Nie znaleziono arkuszy spełniających kryteria wyszukiwania</p>
+        </div>
+          <!-- Modal do podglądu PDF -->    
+        <div id="pdf-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="modal-viewer">
+                        <iframe class="pdf-viewer" id="pdf-viewer"></iframe>
+                    </div>
+                    <div class="modal-info">
+                        <div class="info-header">
+                            <h3 id="modal-arkusz-nazwa-header"></h3>
+                            <button class="close">&times;</button>
+                        </div>
+                        <div class="arkusz-details">
+                            <div class="detail-icon">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <div class="detail-content">
+                                <h3 id="modal-arkusz-nazwa"></h3>
+                                <p class="detail-sesja" id="modal-arkusz-sesja"></p>
+                                <p class="detail-data" id="modal-arkusz-data"></p>
+                            </div>
+                        </div>
+                        <div class="modal-tags">
+                            <h4>Tagi:</h4>
+                            <div class="modal-tags-container" id="modal-tags">
+                                <!-- Tagi będą dodane dynamicznie -->
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-primary btn-download" id="modal-download" download>
+                            <i class="fas fa-download"></i> Pobierz PDF
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
