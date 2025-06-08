@@ -22,7 +22,7 @@
       "plik": "inf2-czerwiec-2022-zadanie-1.pdf",
       "data": "2022-06",
       "sesja": "czerwiec 2022",
-      "tagi": []
+      "tagi": ["Windows Server", "Ubuntu Desktop", "Router", "Przekierowywanie portów", "IIS", "Konfiguracja Systemu", "Diagnostyka"]
     },
     {
       "id": 4,
@@ -30,7 +30,7 @@
       "plik": "inf2-czerwiec-2022-zadanie-2.pdf",
       "data": "2022-06",
       "sesja": "czerwiec 2022",
-      "tagi": []
+      "tagi": ["Ubuntu Server", "Windows 10", "Router", "Przekierowywanie portów", "Apache", "Konfiguracja Systemu", "Diagnostyka"]
     },
     {
       "id": 5,
@@ -38,7 +38,7 @@
       "plik": "inf2-czerwiec-2022-zadanie-3.pdf",
       "data": "2022-06",
       "sesja": "czerwiec 2022",
-      "tagi": []
+      "tagi": ["Windows Server", "Ubuntu Desktop", "Router", "DHCP", "VLAN", "IIS", "Diagnostyka"]
     },
     {
       "id": 6,
@@ -46,7 +46,7 @@
       "plik": "inf2-czerwiec-2022-zadanie-4.pdf",
       "data": "2022-06",
       "sesja": "czerwiec 2022",
-      "tagi": []
+      "tagi": ["Windows Server", "Ubuntu Desktop", "Router", "DHCP", "Przekierowywanie portów", "VLAN", "Serwer plików", "FTP", "Diagnostyka"]
     },
     {
       "id": 7,
@@ -54,7 +54,7 @@
       "plik": "inf2-styczen-2023-zadanie-1.pdf",
       "data": "2023-01",
       "sesja": "Styczeń 2023",
-      "tagi": []
+      "tagi": ["Windows Server", "Ubuntu Desktop", "Router", "DHCP", "Active Directory", "Drukarka", "Konfiguracja Systemu", "Diagnostyka"]
     },
     {
       "id": 8,
@@ -62,7 +62,7 @@
       "plik": "inf2-styczen-2023-zadanie-2.pdf",
       "data": "2023-01",
       "sesja": "Styczeń 2023",
-      "tagi": []
+      "tagi": ["Windows Server", "Ubuntu Desktop", "Router", "DHCP", "Routing", "Konfiguracja Systemu", "Diagnostyka"]
     },
     {
       "id": 9,
@@ -70,7 +70,7 @@
       "plik": "inf2-styczen-2023-zadanie-3.pdf",
       "data": "2023-01",
       "sesja": "Styczeń 2023",
-      "tagi": []
+      "tagi": ["Windows Server", "Windows 10", "Router", "DHCP", "VLAN", "Routing", "Active Directory", "Drukarka", "Konfiguracja Systemu"]
     },
     {
       "id": 10,
@@ -78,7 +78,7 @@
       "plik": "inf2-styczen-2023-zadanie-4.pdf",
       "data": "2023-01",
       "sesja": "Styczeń 2023",
-      "tagi": []
+      "tagi": ["Ubuntu Server", "Windows 10", "Router", "DHCP", "VLAN", "Apache", "Konfiguracja Systemu", "Diagnostyka"]
     },
     {
       "id": 11,
