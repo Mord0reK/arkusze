@@ -6,7 +6,7 @@
       "plik": "inf2-czerwiec-2021-zadanie-1.pdf",
       "data": "2021-06",
       "sesja": "czerwiec 2021",
-      "tagi": []
+      "tagi": ["Ubuntu Server", "Windows 10", "Router", "DHCP", "WiFi", "Konfiguracja Systemu", "Diagnostyka"]
     },
     {
       "id": 2,
@@ -14,7 +14,7 @@
       "plik": "inf2-styczen-2022-zadanie-1.pdf",
       "data": "2022-01",
       "sesja": "Styczeń 2022",
-      "tagi": []
+      "tagi": ["Windows Server", "Ubuntu Desktop", "Router", "DHCP", "Active Directory", "Konfiguracja Systemu", "Diagnostyka", "Kosztorys"]
     },
     {
       "id": 3,
