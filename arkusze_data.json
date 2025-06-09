@@ -206,7 +206,8 @@
       "plik": "inf2-styczen-2025-zadanie-2.pdf",
       "data": "2025-01",
       "sesja": "Styczeń 2025",
-      "tagi": ["Ubuntu Server", "Windows 10", "Router", "SSH", "Zasady Grup", "Kosztorys", "Konfiguracja Systemu"]
+      "tagi": ["Ubuntu Server", "Windows 10", "Router", "SSH", "Zasady Grup", "Kosztorys", "Konfiguracja Systemu"],
+      "plikiRozwiazan": ["Dokument z uzupelnioną tabelką.pdf", "Kosztorys.xlsx"]
     },
     {
       "id": 27,

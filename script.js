@@ -183,6 +183,11 @@ function renderArkusze(filteredArkusze = arkusze) {
                 <a href="arkusze/${arkusz.plik}" class="btn btn-secondary" download>
                     <i class="fas fa-download"></i> Pobierz
                 </a>
+                ${arkusz.plikiRozwiazan && arkusz.plikiRozwiazan.length > 0 ? `
+                <button class="btn btn-success btn-solution" onclick="showSolutionsModal('${arkusz.plik}', '${arkusz.nazwa}')">
+                    <i class="fas fa-lightbulb"></i> Rozwiązanie
+                </button>
+                ` : ''}
             </div>
         </div>
     `).join('');
@@ -229,6 +234,41 @@ function previewPDF(filename, title) {
     modal.style.display = 'block';
 }
 
+// Nowa funkcja do wyświetlania modala z rozwiązaniami
+function showSolutionsModal(arkuszPlik, arkuszNazwa) {
+    const arkusz = arkusze.find(a => a.plik === arkuszPlik);
+    if (!arkusz || !arkusz.plikiRozwiazan || arkusz.plikiRozwiazan.length === 0) {
+        console.warn('Brak zdefiniowanych plików rozwiązań dla:', arkuszNazwa);
+        return;
+    }
+
+    const modal = document.getElementById('solutions-modal');
+    const modalTitle = document.getElementById('solutions-modal-title');
+    const fileList = document.getElementById('solutions-modal-file-list');
+
+    if (!modal || !modalTitle || !fileList) {
+        console.error('Brakuje elementów HTML dla modala rozwiązań.');
+        return;
+    }
+
+    modalTitle.textContent = `Rozwiązania dla: ${arkuszNazwa}`;
+    fileList.innerHTML = ''; // Wyczyść poprzednią listę
+
+    const folderRozwiazania = arkusz.plik.replace('.pdf', '');
+
+    arkusz.plikiRozwiazan.forEach(nazwaPliku => {
+        const listItem = document.createElement('li');
+        const link = document.createElement('a');
+        link.href = `Rozwiązania/${folderRozwiazania}/${nazwaPliku}`;
+        link.textContent = nazwaPliku;
+        link.download = nazwaPliku; // Atrybut download sugeruje pobranie
+        listItem.appendChild(link);
+        fileList.appendChild(listItem);
+    });
+
+    modal.style.display = 'block';
+}
+
 function showError() {
     const container = document.getElementById('arkusze-container');
     container.innerHTML = `
@@ -244,15 +284,31 @@ function showError() {
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('search').addEventListener('input', filterArkusze);
 
-    // Modal
-    document.querySelector('.close').onclick = function() {
-        document.getElementById('pdf-modal').style.display = 'none';
+    // Modal PDF
+    const pdfModal = document.getElementById('pdf-modal');
+    const pdfCloseButton = document.querySelector('#pdf-modal .close'); // Bardziej precyzyjny selektor
+    if (pdfCloseButton) {
+        pdfCloseButton.onclick = function() {
+            if (pdfModal) pdfModal.style.display = 'none';
+        }
+    }
+    
+    // Modal Rozwiązań (zakładając, że istnieje w HTML)
+    const solutionsModal = document.getElementById('solutions-modal');
+    const solutionsCloseButton = document.querySelector('#solutions-modal .close-solutions'); // Użyjemy klasy .close-solutions
+    if (solutionsCloseButton) {
+        solutionsCloseButton.onclick = function() {
+            if (solutionsModal) solutionsModal.style.display = 'none';
+        }
     }
 
+
     window.onclick = function(event) {
-        const modal = document.getElementById('pdf-modal');
-        if (event.target == modal) {
-            modal.style.display = 'none';
+        if (event.target == pdfModal) {
+            if (pdfModal) pdfModal.style.display = 'none';
+        }
+        if (event.target == solutionsModal) { // Obsługa zamykania modala rozwiązań
+            if (solutionsModal) solutionsModal.style.display = 'none';
         }
     }
 

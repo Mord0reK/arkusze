@@ -397,6 +397,91 @@ body {
             border-radius: 12px;
         }
 
+/* Style dla modala rozwiązań */
+.modal-header-solutions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0.8rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #e9ecef;
+}
+
+#solutions-modal-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin: 0;
+}
+
+.close-solutions {
+    background: none;
+    border: none;
+    font-size: 1.7rem;
+    cursor: pointer;
+    color: #6c757d;
+    transition: color 0.3s ease;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+}
+
+.close-solutions:hover {
+    color: #dc3545;
+}
+
+.modal-body-solutions {
+    padding: 0.5rem 0;
+    max-height: 60vh; /* Ograniczenie wysokości dla przewijania */
+    overflow-y: auto; /* Dodanie paska przewijania w razie potrzeby */
+}
+
+#solutions-modal-file-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#solutions-modal-file-list li {
+    margin-bottom: 0.75rem;
+}
+
+#solutions-modal-file-list li a {
+    text-decoration: none;
+    color: #667eea;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 6px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+#solutions-modal-file-list li a:hover {
+    color: #764ba2;
+    background-color: #e9ecef;
+}
+
+#solutions-modal-file-list li a::before {
+    content: '\f15b'; /* Ikona pliku FontAwesome */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    margin-right: 0.5rem;
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #28a745, #218838);
+    color: white;
+}
+
+.btn-success:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3);
+}
+
 .no-results {
     text-align: center;
     padding: 3rem;
