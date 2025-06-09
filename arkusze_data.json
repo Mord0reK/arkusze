@@ -223,7 +223,8 @@
       "plik": "inf2-styczen-2025-zadanie-4.pdf",
       "data": "2025-01",
       "sesja": "Styczeń 2025",
-    "tagi": ["Windows Server", "Windows 10", "Router", "Active Directory", "DNS", "Drukarka", "Zasady Grup", "Kosztorys", "Konfiguracja Systemu"]
+      "tagi": ["Windows Server", "Windows 10", "Router", "Active Directory", "DNS", "Drukarka", "Zasady Grup", "Kosztorys", "Konfiguracja Systemu"],
+      "plikiRozwiazan": ["Dokument z uzupelnioną tabelką.pdf"]
     }
   ],
   "dostepne_tagi": [
