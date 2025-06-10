@@ -351,6 +351,46 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Dark Mode Toggle Logic
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const body = document.body;
+
+    // Function to apply the selected theme
+    function applyTheme(theme) {
+        if (theme === 'dark') {
+            body.classList.add('dark-mode');
+            if (darkModeToggle) darkModeToggle.checked = true;
+        } else {
+            body.classList.remove('dark-mode');
+            if (darkModeToggle) darkModeToggle.checked = false;
+        }
+    }
+
+    // Function to toggle the theme and save preference
+    function toggleTheme() {
+        if (darkModeToggle.checked) {
+            applyTheme('dark');
+            localStorage.setItem('theme', 'dark');
+        } else {
+            applyTheme('light');
+            localStorage.setItem('theme', 'light');
+        }
+    }
+
+    // Add event listener for the toggle switch
+    if (darkModeToggle) {
+        darkModeToggle.addEventListener('change', toggleTheme);
+    }
+
+    // Load saved theme from local storage or default to light
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        applyTheme(savedTheme);
+    } else {
+        // Default to light theme if no preference is stored
+        applyTheme('light');
+    }
+
     // Ładowanie danych przy starcie
     loadData();
 });
