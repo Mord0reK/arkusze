@@ -150,7 +150,8 @@
       "plik": "inf2-czerwiec-2024-zadanie-1.pdf",
       "data": "2024-06",
       "sesja": "czerwiec 2024",
-      "tagi": ["Windows Server", "Ubuntu Desktop", "Router", "VLAN", "DNS", "Kosztorys"]
+      "tagi": ["Windows Server", "Ubuntu Desktop", "Router", "VLAN", "DNS", "Kosztorys"],
+      "plikiRozwiazan": ["Dokument z uzupelnioną tabelką.pdf", "Kosztorys.xlsx"]
     },
     {
       "id": 20,
