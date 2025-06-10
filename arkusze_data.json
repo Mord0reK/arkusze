@@ -175,7 +175,8 @@
       "plik": "inf2-czerwiec-2024-zadanie-4.pdf",
       "data": "2024-06",
       "sesja": "czerwiec 2024",
-      "tagi": ["Ubuntu Server", "Windows 10", "Router", "DHCP", "Batch", "Zasady Grup"]
+      "tagi": ["Ubuntu Server", "Windows 10", "Router", "DHCP", "Batch", "Zasady Grup"],
+      "plikiRozwiazan": ["Dokument z uzupelnioną tabelką.pdf", "Skrypt do utworzenia użytkownika.sh"]
     },
     {
       "id": 23,
