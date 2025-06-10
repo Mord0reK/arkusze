@@ -149,9 +149,8 @@
       "nazwa": "INF.02 Czerwiec 2024 - Zadanie 1",
       "plik": "inf2-czerwiec-2024-zadanie-1.pdf",
       "data": "2024-06",
-      "sesja": "czerwiec 2024",
-      "tagi": ["Windows Server", "Ubuntu Desktop", "Router", "VLAN", "DNS", "Kosztorys"],
-      "plikiRozwiazan": ["Dokument z uzupelnioną tabelką.pdf", "Kosztorys.xlsx"]
+      "sesja": "czerwiec 2024",      "tagi": ["Windows Server", "Ubuntu Desktop", "Router", "VLAN", "DNS", "Kosztorys"],
+      "plikiRozwiazan": ["Dokument z uzupełnioną tabelką.pdf", "Kosztorys.xlsx"]
     },
     {
       "id": 20,
@@ -174,9 +173,8 @@
       "nazwa": "INF.02 Czerwiec 2024 - Zadanie 4",
       "plik": "inf2-czerwiec-2024-zadanie-4.pdf",
       "data": "2024-06",
-      "sesja": "czerwiec 2024",
-      "tagi": ["Ubuntu Server", "Windows 10", "Router", "DHCP", "Batch", "Zasady Grup"],
-      "plikiRozwiazan": ["Dokument z uzupelnioną tabelką.pdf", "Skrypt do utworzenia użytkownika.sh"]
+      "sesja": "czerwiec 2024",      "tagi": ["Ubuntu Server", "Windows 10", "Router", "DHCP", "Batch", "Zasady Grup"],
+      "plikiRozwiazan": ["Dokument z uzupełnioną tabelką.pdf", "Skrypt do tworzenia użytkownika.sh"]
     },
     {
       "id": 23,

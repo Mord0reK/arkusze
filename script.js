@@ -254,75 +254,59 @@ function showSolutionsModal(arkuszPlik, arkuszNazwa) {
     modalTitle.textContent = `Rozwiązania dla: ${arkuszNazwa}`;
     fileList.innerHTML = ''; // Wyczyść poprzednią listę
 
-    const folderRozwiazania = arkusz.plik.replace('.pdf', '');    arkusz.plikiRozwiazan.forEach(nazwaPliku => {
+    const folderRozwiazania = arkusz.plik.replace('.pdf', '');    arkusz.plikiRozwiazan.forEach(nazwaPliku => {        
         const listItem = document.createElement('li');
         const link = document.createElement('a');
         // Modyfikacja ścieżki - zapewnienie prawidłowego kodowania URL dla znaków specjalnych
         const encodedFolder = encodeURIComponent(folderRozwiazania);
         const encodedFile = encodeURIComponent(nazwaPliku);
-        link.href = `Rozwiązania/${encodedFolder}/${encodedFile}`;
+        const filePath = `Rozwiązania/${encodedFolder}/${encodedFile}`;
+        link.href = filePath;
         link.textContent = nazwaPliku;
-        link.download = nazwaPliku; // Atrybut download sugeruje pobranie
-        // Dodanie obsługi błędów podczas pobierania
+        link.setAttribute('download', nazwaPliku); // Używamy setAttribute zamiast właściwości
+        link.setAttribute('target', '_blank'); // Otwieranie w nowej karcie pomaga z plikami binarnymi
+        
+        // Poprawiona obsługa pobierania
         link.onclick = function(e) {
-            // Sprawdzamy czy plik istnieje przed pobraniem
-            fetch(link.href, { method: 'HEAD' })
+            e.preventDefault(); // Zatrzymujemy domyślną akcję
+            
+            // Pobieramy plik jako blob
+            fetch(filePath)
                 .then(response => {
                     if (!response.ok) {
-                        e.preventDefault();
-                        alert(`Błąd: Nie można znaleźć pliku ${nazwaPliku}`);
+                        throw new Error(`Nie można znaleźć pliku ${nazwaPliku}`);
                     }
+                    // Określenie typu MIME pliku na podstawie rozszerzenia
+                    let contentType;
+                    if (nazwaPliku.endsWith('.pdf')) contentType = 'application/pdf';
+                    else if (nazwaPliku.endsWith('.xlsx')) contentType = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet';
+                    else if (nazwaPliku.endsWith('.sh')) contentType = 'application/x-sh';
+                    else contentType = 'application/octet-stream';
+                    
+                    return response.blob();
+                })
+                .then(blob => {
+                    // Tworzenie URL dla pobieranego pliku
+                    const url = window.URL.createObjectURL(blob);
+                    const tempLink = document.createElement('a');
+                    tempLink.href = url;
+                    tempLink.download = nazwaPliku;
+                    document.body.appendChild(tempLink);
+                    tempLink.click();
+                    document.body.removeChild(tempLink);
+                    window.URL.revokeObjectURL(url);
                 })
                 .catch(err => {
-                    e.preventDefault();
-                    console.error('Błąd sprawdzania pliku:', err);
-                    alert(`Błąd podczas próby pobierania pliku: ${err.message}`);
+                    console.error('Błąd pobierania:', err);
+                    alert(`Błąd: ${err.message}`);
                 });
-        };
-        listItem.appendChild(link);
+        };        listItem.appendChild(link);
         fileList.appendChild(listItem);    });
-
-    // Dodanie przycisku do debugowania
-    const debugButton = document.createElement('button');
-    debugButton.className = 'btn btn-sm btn-info mt-3';
-    debugButton.textContent = 'Diagnostyka pobierania';
-    debugButton.onclick = function() {
-        const testFile = arkusz.plikiRozwiazan[0];
-        const testUrl = `Rozwiązania/${folderRozwiazania}/${testFile}`;
-        debugFileDownload(testUrl);
-    };
-    fileList.appendChild(document.createElement('br'));
-    fileList.appendChild(debugButton);
 
     modal.style.display = 'block';
 }
 
-// Funkcja pomocnicza do debugowania problemów z pobieraniem plików
-function debugFileDownload(fileUrl) {
-    console.log(`Próba pobrania: ${fileUrl}`);
-    
-    fetch(fileUrl)
-        .then(response => {
-            console.log(`Status odpowiedzi: ${response.status}`);
-            console.log(`Typ zawartości: ${response.headers.get('Content-Type')}`);
-            console.log(`Rozmiar pliku: ${response.headers.get('Content-Length')} bajtów`);
-            
-            if (!response.ok) {
-                console.error(`Błąd pobierania: ${response.statusText}`);
-                return;
-            }
-            
-            return response.blob();
-        })
-        .then(blob => {
-            if (blob) {
-                console.log(`Pobrano plik jako ${blob.type}, rozmiar: ${blob.size} bajtów`);
-            }
-        })
-        .catch(err => {
-            console.error('Błąd podczas pobierania:', err);
-        });
-}
+
 
 function showError() {
     const container = document.getElementById('arkusze-container');
