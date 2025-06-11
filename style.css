@@ -1,3 +1,103 @@
+/* Color variables (Light Mode by default) */
+:root {
+    --background-gradient-start: #667eea;
+    --background-gradient-end: #764ba2;
+    --text-color: #333;
+    --header-text-color: white;
+    --card-background: white;
+    --card-border-hover: #667eea;
+    --card-info-h3: #2d3748;
+    --card-info-sesja: #718096;
+    --tag-background: #f8f9fa;
+    --tag-border: #e9ecef;
+    --tag-text-color: #333; /* Added for tag text */
+    --tag-active-background: #667eea;
+    --tag-active-text: white;
+    --arkusz-tag-background: linear-gradient(135deg, #667eea15, #764ba215);
+    --arkusz-tag-border: #667eea25;
+    --arkusz-tag-text: #667eea;
+    --modal-content-background: white;
+    --modal-info-background: #f8f9fa;
+    --modal-header-border: #e9ecef;
+    --modal-close-text: #6c757d;
+    --modal-close-hover-text: #dc3545;
+    --button-secondary-background: #f8f9fa;
+    --button-secondary-text: #495057;
+    --button-secondary-border: #e9ecef;
+    --button-secondary-hover-background: #e9ecef;
+    --input-background: rgba(255,255,255,0.95);
+    --input-border: #e1e5e9;
+    --input-focus-border: #667eea;
+    --input-focus-shadow: rgba(102, 126, 234, 0.1);
+    --input-placeholder-color: #718096; /* Added for placeholder */
+    --stats-background: rgba(255,255,255,0.1);
+    --stats-text-color: white;
+    --stats-label-opacity: 0.8;
+    --no-results-text-color: white;
+    --no-results-icon-opacity: 0.7;
+    --solutions-link-color: #667eea;
+    --solutions-link-hover-color: #764ba2;
+    --solutions-link-background: #f8f9fa;
+    --solutions-link-hover-background: #e9ecef;
+    --arkusz-icon-gradient-start: #667eea;
+    --arkusz-icon-gradient-end: #764ba2;
+    --btn-primary-gradient-start: #667eea;
+    --btn-primary-gradient-end: #764ba2;
+    --btn-success-gradient-start: #28a745;
+    --btn-success-gradient-end: #218838;
+    --pdf-viewer-background: transparent; /* Default transparent */
+}
+
+body.dark-mode {
+    --background-gradient-start: #1a1a2e;
+    --background-gradient-end: #16213e;
+    --text-color: #e0e0e0;
+    --header-text-color: #f0f0f0;
+    --card-background: #2c3e50;
+    --card-border-hover: #8e44ad;
+    --card-info-h3: #ecf0f1;
+    --card-info-sesja: #bdc3c7;
+    --tag-background: #34495e;
+    --tag-border: #2c3e50;
+    --tag-text-color: #e0e0e0; /* Tag text in dark mode */
+    --tag-active-background: #8e44ad;
+    --tag-active-text: white;
+    --arkusz-tag-background: linear-gradient(135deg, #8e44ad30, #9b59b630);
+    --arkusz-tag-border: #8e44ad40;
+    --arkusz-tag-text: #c593d7;
+    --modal-content-background: #2c3e50;
+    --modal-info-background: #34495e;
+    --modal-header-border: #4a6fa5;
+    --modal-close-text: #bdc3c7;
+    --modal-close-hover-text: #ff6b6b;
+    --button-secondary-background: #34495e;
+    --button-secondary-text: #ecf0f1;
+    --button-secondary-border: #2c3e50;
+    --button-secondary-hover-background: #4a6fa5;
+    --input-background: #2c3e50e6; /* rgba(44, 62, 80, 0.9) */
+    --input-border: #4a6fa5;
+    --input-focus-border: #8e44ad;
+    --input-focus-shadow: rgba(142, 68, 173, 0.2);
+    --input-placeholder-color: #bdc3c7; /* Placeholder in dark mode */
+    --stats-background: rgba(255,255,255,0.05);
+    --stats-text-color: #f0f0f0;
+    --stats-label-opacity: 0.7;
+    --no-results-text-color: #bdc3c7;
+    --no-results-icon-opacity: 0.6;
+    --solutions-link-color: #c593d7;
+    --solutions-link-hover-color: #8e44ad;
+    --solutions-link-background: #34495e;
+    --solutions-link-hover-background: #4a6fa5;
+    --arkusz-icon-gradient-start: #8e44ad;
+    --arkusz-icon-gradient-end: #9b59b6;
+    --btn-primary-gradient-start: #8e44ad;
+    --btn-primary-gradient-end: #9b59b6;
+    --btn-success-gradient-start: #1abc9c; /* Dark mode success gradient example */
+    --btn-success-gradient-end: #16a085; /* Dark mode success gradient example */
+    --pdf-viewer-background: #34495e; /* Optional dark background for PDF viewer */
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -6,9 +106,9 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, var(--background-gradient-start) 0%, var(--background-gradient-end) 100%);
     min-height: 100vh;
-    color: #333;
+    color: var(--text-color);
 }
 
 .container {
@@ -21,7 +121,7 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 2rem;
-    color: white;
+    color: var(--header-text-color);
 }
 
 .header-left {
@@ -37,7 +137,10 @@ body {
 
 .header-left p {
     font-size: 1.1rem;
-    opacity: 0.9;
+    opacity: 0.9; /* Default opacity */
+}
+body.dark-mode .header-left p {
+    opacity: 0.7; /* Dark mode opacity */
 }
 
 .header-right {
@@ -47,14 +150,14 @@ body {
 }
 
 .search-container {
-    background: rgba(255,255,255,0.95);
+    background: var(--input-background);
     padding: 0.5rem;
     border-radius: 12px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 }
 
 .filters {
-    background: rgba(255,255,255,0.95);
+    background: var(--input-background); /* Using input-background for consistency */
     padding: 1rem 1.5rem;
     border-radius: 12px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
@@ -64,16 +167,26 @@ body {
 .search-input {
     min-width: 300px;
     padding: 0.75rem 1rem;
-    border: 2px solid #e1e5e9;
+    border: 2px solid var(--input-border);
     border-radius: 8px;
     font-size: 1rem;
     transition: all 0.3s ease;
+    background-color: transparent; /* Make it transparent to use parent's background */
+    color: var(--text-color);
+}
+
+.search-input::placeholder {
+    color: var(--input-placeholder-color);
+    opacity: 0.7;
+}
+body.dark-mode .search-input::placeholder {
+    opacity: 0.6;
 }
 
 .search-input:focus {
     outline: none;
-    border-color: #667eea;
-    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    border-color: var(--input-focus-border);
+    box-shadow: 0 0 0 3px var(--input-focus-shadow);
 }
 
 .tag-filter {
@@ -84,8 +197,9 @@ body {
 
 .tag {
     padding: 0.4rem 0.8rem;
-    background: #f8f9fa;
-    border: 2px solid #e9ecef;
+    background: var(--tag-background);
+    border: 2px solid var(--tag-border);
+    color: var(--tag-text-color);
     border-radius: 20px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -94,14 +208,20 @@ body {
 }
 
 .tag:hover {
-    background: #e9ecef;
+    /* Let's define a hover explicitly or rely on variables if they cover hover */
+    /* For now, keeping original behavior, can be var(--tag-hover-background) if defined */
+    background: #e9ecef; /* Original hover */
     transform: translateY(-1px);
 }
+body.dark-mode .tag:hover {
+    background: var(--button-secondary-hover-background); /* Example for dark mode */
+}
+
 
 .tag.active {
-    background: #667eea;
-    color: white;
-    border-color: #667eea;
+    background: var(--tag-active-background);
+    color: var(--tag-active-text);
+    border-color: var(--tag-active-background);
 }
 
 .arkusze-grid {
@@ -111,21 +231,25 @@ body {
 }
 
 .arkusz-card {
-    background: white;
+    background: var(--card-background);
     border-radius: 12px;
     padding: 1.5rem;
     box-shadow: 0 3px 15px rgba(0,0,0,0.08);
     transition: all 0.3s ease;
-    border: 1px solid transparent;
+    border: 1px solid transparent; /* Initially transparent, hover changes it */
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+body.dark-mode .arkusz-card {
+    border: 1px solid var(--tag-border); /* Subtle border in dark mode */
+}
+
 
 .arkusz-card:hover {
     transform: translateY(-2px);
     box-shadow: 0 10px 30px rgba(0,0,0,0.12);
-    border-color: #667eea;
+    border-color: var(--card-border-hover);
 }
 
 .arkusz-left {
@@ -143,12 +267,12 @@ body {
 .arkusz-icon {
     width: 45px;
     height: 45px;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: linear-gradient(135deg, var(--arkusz-icon-gradient-start), var(--arkusz-icon-gradient-end));
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: white; /* Icon color is white, gradient is background */
     font-size: 1.3rem;
     margin-right: 1rem;
     flex-shrink: 0;
@@ -158,11 +282,11 @@ body {
     font-size: 1.1rem;
     font-weight: 600;
     margin-bottom: 0.25rem;
-    color: #2d3748;
+    color: var(--card-info-h3);
 }
 
 .arkusz-info .sesja {
-    color: #718096;
+    color: var(--card-info-sesja);
     font-size: 0.85rem;
 }
 
@@ -177,11 +301,11 @@ body {
 
 .arkusz-tag {
     padding: 0.2rem 0.5rem;
-    background: linear-gradient(135deg, #667eea15, #764ba215);
-    border: 1px solid #667eea25;
+    background: var(--arkusz-tag-background);
+    border: 1px solid var(--arkusz-tag-border);
     border-radius: 12px;
     font-size: 0.75rem;
-    color: #667eea;
+    color: var(--arkusz-tag-text);
     font-weight: 500;
 }
 
@@ -208,25 +332,43 @@ body {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    color: white;
+    background: linear-gradient(135deg, var(--btn-primary-gradient-start), var(--btn-primary-gradient-end));
+    color: white; /* Text color for primary button is white */
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3); /* Consider variable for shadow if it changes */
+}
+body.dark-mode .btn-primary:hover {
+    box-shadow: 0 8px 25px rgba(142, 68, 173, 0.4); /* Dark mode shadow */
 }
 
+
 .btn-secondary {
-    background: #f8f9fa;
-    color: #495057;
-    border: 2px solid #e9ecef;
+    background: var(--button-secondary-background);
+    color: var(--button-secondary-text);
+    border: 2px solid var(--button-secondary-border);
 }
 
 .btn-secondary:hover {
-    background: #e9ecef;
+    background: var(--button-secondary-hover-background);
     transform: translateY(-2px);
 }
+
+.btn-success {
+    background: linear-gradient(135deg, var(--btn-success-gradient-start), var(--btn-success-gradient-end));
+    color: white; /* Text color for success button is white */
+}
+
+.btn-success:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3); /* Consider variable for shadow */
+}
+body.dark-mode .btn-success:hover {
+     box-shadow: 0 8px 25px rgba(26, 188, 156, 0.4); /* Dark mode shadow */
+}
+
 
 .modal {
     display: none;
@@ -244,7 +386,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: white;
+    background: var(--modal-content-background);
     padding: 1.5rem;
     border-radius: 15px;
     width: 95%;
@@ -260,13 +402,13 @@ body {
     align-items: center;
     margin-bottom: 1.25rem;
     padding-bottom: 0.8rem;
-    border-bottom: 2px solid #e9ecef;
+    border-bottom: 2px solid var(--modal-header-border);
 }
 
 #modal-arkusz-nazwa-header {
     font-size: 1.2rem;
     font-weight: 600;
-    color: #2d3748;
+    color: var(--card-info-h3); /* Using card title color */
     margin: 0;
     flex: 1;
     padding-right: 1rem;
@@ -275,13 +417,13 @@ body {
 .modal-body {
     display: flex;
     gap: 1.5rem;
-    height: calc(90vh - 80px);
+    height: calc(90vh - 80px); /* Adjust based on padding/header */
 }
 
 .modal-info {
     width: 280px;
     flex-shrink: 0;
-    background: #f8f9fa;
+    background: var(--modal-info-background);
     border-radius: 12px;
     padding: 1.25rem;
     overflow-y: auto;
@@ -301,10 +443,10 @@ body {
     margin-bottom: 1.5rem;
 }
 
-.detail-icon {
+.detail-icon { /* Uses arkusz-icon gradient */
     width: 50px;
     height: 50px;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: linear-gradient(135deg, var(--arkusz-icon-gradient-start), var(--arkusz-icon-gradient-end));
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -319,19 +461,22 @@ body {
     font-size: 1.1rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
-    color: #2d3748;
+    color: var(--card-info-h3);
     line-height: 1.3;
 }
 
 .detail-sesja {
-    color: #667eea;
+    color: var(--arkusz-tag-text); /* Using arkusz tag text color */
     font-weight: 500;
     margin-bottom: 0.25rem;
     font-size: 0.9rem;
 }
+body.dark-mode .detail-sesja { /* Specific override if needed */
+    color: var(--arkusz-tag-text);
+}
 
 .detail-data {
-    color: #718096;
+    color: var(--card-info-sesja);
     font-size: 0.85rem;
     font-weight: 500;
 }
@@ -341,7 +486,7 @@ body {
 }
 
 .modal-tags h4 {
-    color: #2d3748;
+    color: var(--card-info-h3);
     font-size: 1rem;
     margin-bottom: 0.75rem;
     font-weight: 600;
@@ -355,11 +500,11 @@ body {
 
 .modal-tag {
     padding: 0.3rem 0.7rem;
-    background: linear-gradient(135deg, #667eea20, #764ba220);
-    border: 1px solid #667eea30;
+    background: var(--arkusz-tag-background); /* Consistent with arkusz tags */
+    border: 1px solid var(--arkusz-tag-border);
     border-radius: 15px;
     font-size: 0.8rem;
-    color: #667eea;
+    color: var(--arkusz-tag-text);
     font-weight: 500;
 }
 
@@ -376,26 +521,29 @@ body {
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-.close {
+.close, .close-solutions { /* Combined common styles */
     background: none;
     border: none;
     font-size: 1.7rem;
     cursor: pointer;
-    color: #6c757d;
+    color: var(--modal-close-text);
     transition: color 0.3s ease;
     padding: 0;
     margin: 0;
     line-height: 1;
 }
 
-.close:hover {
-    color: #dc3545;
-}        .pdf-viewer {
-            width: 100%;
-            height: 100%;
-            border: none;
-            border-radius: 12px;
-        }
+.close:hover, .close-solutions:hover {
+    color: var(--modal-close-hover-text);
+}
+
+.pdf-viewer {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 12px;
+    background-color: var(--pdf-viewer-background);
+}
 
 /* Style dla modala rozwiązań */
 .modal-header-solutions {
@@ -404,31 +552,17 @@ body {
     align-items: center;
     padding-bottom: 0.8rem;
     margin-bottom: 1rem;
-    border-bottom: 2px solid #e9ecef;
+    border-bottom: 2px solid var(--modal-header-border);
 }
 
 #solutions-modal-title {
     font-size: 1.2rem;
     font-weight: 600;
-    color: #2d3748;
+    color: var(--card-info-h3); /* Using card title color */
     margin: 0;
 }
 
-.close-solutions {
-    background: none;
-    border: none;
-    font-size: 1.7rem;
-    cursor: pointer;
-    color: #6c757d;
-    transition: color 0.3s ease;
-    padding: 0;
-    margin: 0;
-    line-height: 1;
-}
-
-.close-solutions:hover {
-    color: #dc3545;
-}
+/* .close-solutions is covered by combined .close, .close-solutions rule above */
 
 .modal-body-solutions {
     padding: 0.5rem 0;
@@ -448,21 +582,21 @@ body {
 
 #solutions-modal-file-list li a {
     text-decoration: none;
-    color: #667eea;
+    color: var(--solutions-link-color);
     font-weight: 500;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, background-color 0.3s ease;
     display: flex;
     align-items: center;
     gap: 0.5rem;
     padding: 0.5rem;
     border-radius: 6px;
-    background-color: #f8f9fa;
-    border: 1px solid #e9ecef;
+    background-color: var(--solutions-link-background);
+    border: 1px solid var(--tag-border); /* Consistent border */
 }
 
 #solutions-modal-file-list li a:hover {
-    color: #764ba2;
-    background-color: #e9ecef;
+    color: var(--solutions-link-hover-color);
+    background-color: var(--solutions-link-hover-background);
 }
 
 #solutions-modal-file-list li a::before {
@@ -472,26 +606,18 @@ body {
     margin-right: 0.5rem;
 }
 
-.btn-success {
-    background: linear-gradient(135deg, #28a745, #218838);
-    color: white;
-}
-
-.btn-success:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3);
-}
+/* .btn-success was handled earlier */
 
 .no-results {
     text-align: center;
     padding: 3rem;
-    color: white;
+    color: var(--no-results-text-color);
 }
 
 .no-results i {
     font-size: 4rem;
     margin-bottom: 1rem;
-    opacity: 0.7;
+    opacity: var(--no-results-icon-opacity);
 }
 
 .no-results h3 {
@@ -500,10 +626,10 @@ body {
 }
 
 .stats {
-    background: rgba(255,255,255,0.1);
+    background: var(--stats-background);
     border-radius: 10px;
     padding: 0.8rem 1rem;
-    color: white;
+    color: var(--stats-text-color);
     display: flex;
     gap: 2rem;
     align-items: center;
@@ -526,7 +652,7 @@ body {
 
 .stat-label {
     font-size: 0.8rem;
-    opacity: 0.8;
+    opacity: var(--stats-label-opacity);
 }
 
 @media (max-width: 768px) {
@@ -546,25 +672,39 @@ body {
 
     .header-right {
         width: 100%;
-        justify-content: flex-end;
+        /* justify-content: flex-end; Original */
+        justify-content: space-between; /* Adjusted to space out toggle and search */
+    }
+    .theme-switch-container {
+        margin-right: 0; /* Remove margin for smaller screens if search is on new line */
     }
 
     .search-container {
-        width: 100%;
+        width: auto; /* Allow it to shrink */
+        flex-grow: 1; /* Allow it to grow if toggle is small */
     }
 
     .search-input {
-        min-width: 100%;
+        min-width: 150px; /* Allow search to be smaller */
     }
+
 
     .stats {
         flex-direction: column;
         gap: 1rem;
+        width: 100%; /* Make stats full width on mobile */
+        margin-top: 1rem; /* Add some space above stats */
+    }
+    .header-right > .stats { /* If stats is direct child of header-right */
+        width: 100%;
+        margin-top: 1rem;
     }
 
+
     .stats-grid {
-        flex-direction: column;
-        gap: 1rem;
+        flex-direction: row; /* Keep grid items in a row for stats */
+        justify-content: space-around; /* Distribute stat items */
+        gap: 1rem; /* Smaller gap for mobile stats grid */
     }
 
     .arkusz-card {
@@ -588,19 +728,25 @@ body {
     }    .modal-content {
         width: 95%;
         padding: 1rem;
-    }    .modal-body {
+    }
+    .modal-body {
         flex-direction: column;
-        height: auto;
+        height: auto; /* Was calc(90vh - 80px) which might be too large */
+        max-height: 80vh; /* Ensure overall modal body is scrollable if content overflows */
     }    .modal-info {
         width: 100%;
         margin-top: 1rem;
-        max-height: 250px;
+        max-height: 250px; /* Keep this for scrollable info section */
         overflow-y: auto;
         order: 2;
     }
     
     .modal-viewer {
         order: 1;
+        height: 350px; /* Fixed height for PDF viewer on mobile */
+    }
+    .pdf-viewer { /* Ensure iframe within viewer also respects height */
+        height: 100%;
     }
     
     .btn-download {
@@ -625,7 +771,115 @@ body {
         margin-bottom: 1rem;
     }
 
-    .pdf-viewer {
-        height: 400px;
+    .pdf-viewer { /* Explicitly setting height for mobile again, if needed */
+        height: 350px; /* Match modal-viewer height */
     }
+}
+
+/* Theme toggle switch styles */
+.theme-switch-container {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 28px;
+}
+
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc; /* Default light mode toggle background */
+    transition: .4s;
+    border-radius: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4px;
+}
+body.dark-mode .slider {
+    background-color: #4a6fa5; /* Dark mode toggle background (when off) */
+}
+
+
+.slider:before { /* The sliding circle */
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+input:checked + .slider {
+    background-color: var(--input-focus-border); /* Use a theme color for ON state */
+}
+body.dark-mode input:checked + .slider {
+    background-color: var(--tag-active-background); /* Dark mode ON state */
+}
+
+
+input:focus + .slider {
+    box-shadow: 0 0 1px var(--input-focus-border);
+}
+body.dark-mode input:focus + .slider {
+    box-shadow: 0 0 1px var(--tag-active-background);
+}
+
+input:checked + .slider:before {
+    transform: translateX(22px);
+}
+
+.slider .sun-icon, .slider .moon-icon {
+    font-size: 14px;
+    transition: opacity 0.4s ease, transform 0.4s ease; /* Added transform */
+    z-index: 0;
+}
+
+.slider .sun-icon {
+    color: #f39c12;
+}
+
+.slider .moon-icon {
+    color: #f0f0f0; /* Moon icon color for dark toggle */
+}
+
+/* Show sun icon by default, hide moon */
+input:not(:checked) + .slider .moon-icon {
+    opacity: 0;
+    transform: translateX(10px); /* Move it out of view */
+}
+input:not(:checked) + .slider .sun-icon {
+    opacity: 1;
+    margin-left: auto;
+    transform: translateX(0);
+}
+
+/* Show moon icon when checked, hide sun */
+input:checked + .slider .sun-icon {
+    opacity: 0;
+    transform: translateX(-10px); /* Move it out of view */
+}
+input:checked + .slider .moon-icon {
+    opacity: 1;
+    margin-right: auto;
+    transform: translateX(0);
 }
