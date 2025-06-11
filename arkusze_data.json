@@ -127,7 +127,8 @@
       "plik": "inf2-styczen-2024-zadanie-2.pdf",
       "data": "2024-01",
       "sesja": "Styczeń 2024",
-      "tagi": ["Ubuntu Server", "Windows 10", "VLAN", "Router", "DHCP", "Zasady Grup", "Konfiguracja Systemu", "Kosztorys"]
+      "tagi": ["Ubuntu Server", "Windows 10", "VLAN", "Router", "DHCP", "Zasady Grup", "Konfiguracja Systemu", "Kosztorys"],
+      "plikiRozwiazan": ["Kosztorys.xlsx"]
     },
     {
       "id": 17,
